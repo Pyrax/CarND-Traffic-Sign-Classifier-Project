@@ -74,7 +74,7 @@ The following bar chart displays the distribution of the classes in the training
 Outlined above, the training dataset is not balanced across classes. In fact, the classes with the most samples contain 
 about 10 times more data than the classes with the least amount of samples.
 In order to improve the accuracy of the neural network, this could be addressed by using oversampling techniques like
-[SMOTE [1]][1].
+[SMOTE][1].
 
 
 ### Design and Test a Model Architecture
@@ -144,7 +144,7 @@ My final model results were:
 * test set accuracy of 94.7%
 
 First off, I started building a model with the LeNet-architecture as described by Yann LeCun in ["GradientBased 
-Learning Applied to Document Recognition" [2]][2]. My plan behind this was to use a simple architecture that works 
+Learning Applied to Document Recognition"][2]. My plan behind this was to use a simple architecture that works 
 efficient enough on systems with limited resources, reaches sufficient accuracy on smaller datasets and is easy to 
 fiddle with for a less experienced machine learning engineer. Then, I wanted to keep the structure of the layers and 
 tried to use other techniques to improve the accuracy. 
@@ -168,7 +168,7 @@ the traffic sign (e.g. flipping is not suitable as speed limits would become mir
 
 Moreover, I applied dropout with a probability of 50% after the fully connected layers to reduce overfitting. This 
 allowed me to train for more epochs without overfitting, leading to higher accuracy in the end. Although, 
-[Park & Kwak [3]][3] have described in chapter 3 "Effectiveness of Dropout in Convolutional Layer" in their paper that 
+[Park & Kwak][3] have described in chapter 3 "Effectiveness of Dropout in Convolutional Layer" in their paper that 
 a dropout of 10% applied after a convolutional layer can improve accuracy, I did not achieve better results with it. 
 Therefore, I did not add it to the final model. Testing different probabilities of 10%, 20%, 40%, 50%, 60%, 80% and 90% 
 has turned out that dropout of 50% only after the fully connected layers reaches the best accuracy here.
@@ -177,7 +177,7 @@ In the following, I decided to determine the initial learning rate of the model.
 1e-3 performed the best. 1e-4 learns too slow on a relatively small dataset and 1e-2 is too high and results in 
 overfitting again. Learning rate decay is handled by the default parameters of TensorFlow for the AdamOptimizer.
 
-Furthermore, I considered other initialization methods for the biases and weights of layers. [Ganegedara [4]][4]
+Furthermore, I considered other initialization methods for the biases and weights of layers. [Ganegedara][4]
 suggests using Xavier initialization for weights. However, it showed little to no effect as opposed to truncated normal 
 initialization in the final accuracy. Initializing the biases to a small constant value instead of setting them to zero 
 also made no significant difference.
