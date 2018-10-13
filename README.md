@@ -143,7 +143,7 @@ My final model results were:
 * validation set accuracy of 96.6%
 * test set accuracy of 94.7%
 
-First off, I started building a model with the LeNet-architecture as described by Yann LeCun in ["GradientBased 
+First off, I started building a model with the LeNet-architecture as described by Yann LeCun in ["Gradient-Based 
 Learning Applied to Document Recognition"][2]. My plan behind this was to use a simple architecture that works 
 efficient enough on systems with limited resources, reaches sufficient accuracy on smaller datasets and is easy to 
 fiddle with for a less experienced machine learning engineer. Then, I wanted to keep the structure of the layers and 
